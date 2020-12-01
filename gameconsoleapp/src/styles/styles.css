@@ -1,0 +1,34 @@
+.psimage:hover {
+    border: 2px lightgray solid;
+    animation: glow 1s alternate infinite;
+}
+
+.xboximage:hover {
+    border: 2px gray solid; 
+    animation: glow 1s alternate infinite;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #fff;
+    }
+    50% {
+        box-shadow: 0 0 10px #fff;
+    }
+    100% {
+        box-shadow: 0 0 5px #fff;
+    }
+}
+
+body {
+    background-color: #000514;
+    color: #ffff !important;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #ffff !important;
+}
+
+.btn-primary:hover {
+    animation: glow 1s alternate infinite;
+}
