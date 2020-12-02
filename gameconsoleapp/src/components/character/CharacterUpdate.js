@@ -55,7 +55,7 @@ const CharacterUpdate = () => {
             </Form.Row>
             <Form.Row>
                 <Form.Group>
-                    <Button onClick={updateCharacter}>Change</Button>
+                    <Button onClick={updateCharacter}>Endre</Button>
                 </Form.Group>
             </Form.Row>
         </Form>

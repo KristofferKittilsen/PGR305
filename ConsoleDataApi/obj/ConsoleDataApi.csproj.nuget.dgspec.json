@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Skole 2020-2021\\PGR305 - Web 3\\PGR305_exam\\ConsoleDataApi\\ConsoleDataApi.csproj": {}
+    "C:\\Users\\krist\\OneDrive\\Skrivebord\\PGR305\\ConsoleDataApi\\ConsoleDataApi.csproj": {}
   },
   "projects": {
-    "D:\\Skole 2020-2021\\PGR305 - Web 3\\PGR305_exam\\ConsoleDataApi\\ConsoleDataApi.csproj": {
+    "C:\\Users\\krist\\OneDrive\\Skrivebord\\PGR305\\ConsoleDataApi\\ConsoleDataApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Skole 2020-2021\\PGR305 - Web 3\\PGR305_exam\\ConsoleDataApi\\ConsoleDataApi.csproj",
+        "projectUniqueName": "C:\\Users\\krist\\OneDrive\\Skrivebord\\PGR305\\ConsoleDataApi\\ConsoleDataApi.csproj",
         "projectName": "ConsoleDataApi",
-        "projectPath": "D:\\Skole 2020-2021\\PGR305 - Web 3\\PGR305_exam\\ConsoleDataApi\\ConsoleDataApi.csproj",
+        "projectPath": "C:\\Users\\krist\\OneDrive\\Skrivebord\\PGR305\\ConsoleDataApi\\ConsoleDataApi.csproj",
         "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
-        "outputPath": "D:\\Skole 2020-2021\\PGR305 - Web 3\\PGR305_exam\\ConsoleDataApi\\obj\\",
+        "outputPath": "C:\\Users\\krist\\OneDrive\\Skrivebord\\PGR305\\ConsoleDataApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config"

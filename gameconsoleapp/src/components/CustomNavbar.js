@@ -4,7 +4,8 @@ const { Col, Navbar, Nav, NavDropdown } = require("react-bootstrap")
 
 const CustomNavbar = () => {
     return (
-        <NavbarStyled>
+        <NavbarStyled collapseOnSelect expand="lg">
+            <NavbarToggleStyled bg="light" aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse className="justify-content-center">
                 <NavStyled>
                     <Nav.Link style={{color: "#ffff"}} as={Link} to="/">Home</Nav.Link>
@@ -22,11 +23,15 @@ const CustomNavbar = () => {
 }
 
 const NavbarStyled = styled(Navbar)`
-    background-color: #000514;
+    
 `;
 
 const NavStyled = styled(Nav)`
     font-size: 1.5rem;
+`;
+
+const NavbarToggleStyled = styled(Navbar.Toggle)`
+    background-color: #ffff;
 `;
 
 export default CustomNavbar;

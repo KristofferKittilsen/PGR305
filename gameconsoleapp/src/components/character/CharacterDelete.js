@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Card, Modal } from "react-bootstrap";
 import styled from 'styled-components';
 
 const CharacterDelete = (props) => {
@@ -17,34 +17,38 @@ const CharacterDelete = (props) => {
     }
 
     return (
-        <TrStyled>
+        <CardStyled className="mt-4">
             <Modal show={show} onHide={() => setShow(false)}>
                 <Modal.Header>
-                    <Modal.Title>You sure?</Modal.Title>
+                    <ModalTitle>You sure?</ModalTitle>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>You sure you want to delete this game from database?</p>
+                    <ModalP>You sure you want to delete this game from database?</ModalP>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={() => setShow(false)}>Close</Button>
-                    <Button onClick={deleteCharacter}>Yes!</Button>
+                    <Button variant="danger" onClick={() => setShow(false)}>Close</Button>
+                    <Button variant="success" onClick={deleteCharacter}>Yes!</Button>
                 </Modal.Footer>
             </Modal>   
-            <td>
-                {props.gameId}
-            </td>
-            <td>
-                {props.name}
-            </td>
-            <td>
-                <Button onClick={() => setShow(true)}>Delete</Button>
-            </td>
-        </TrStyled>
+            <Card.Title>GameId: {props.gameId}</Card.Title>
+            <Card.Title>{props.name}</Card.Title>
+            <Button onClick={() => setShow(true)}>Slett</Button>
+        </CardStyled>
     )
 }
 
-const TrStyled = styled.tr`
-    color: #ffff;
+const CardStyled = styled(Card)`
+    color: black;
+    font-size: 0.8rem;
+    border: none;
+`;
+
+const ModalTitle = styled(Modal.Title)`
+    color: black;
+`;
+
+const ModalP = styled.p`
+    color: black;
 `;
 
 export default CharacterDelete;

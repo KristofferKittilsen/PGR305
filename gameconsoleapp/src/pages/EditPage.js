@@ -15,11 +15,6 @@ const EditPage = () => {
                     <h3>Endre</h3>
                 </Col>
             </Row>
-            <Row className="mt-3 mb-3">
-                <Col>
-                    <h3>Spill</h3>
-                </Col>
-            </Row>
             <Row>
                 <Col>
                     <GameProvider>

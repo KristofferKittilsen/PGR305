@@ -5,13 +5,13 @@ import CustomNavbar from "../components/CustomNavbar";
 const Home = () => {
     return (
         <Container>
-            <Row className="mt-5">
-                <Col>
+            <Row className="mt-2">
+                <Col lg={6} className="mt-4">
                     <Link to="/ps">
                         <Image className="psimage" src="https://localhost:5001/images/ps5.png" fluid />
                     </Link>
                 </Col>
-                <Col>
+                <Col lg={6} className="mt-4">
                     <Link to="/xbox">
                         <Image className="xboximage" src="https://localhost:5001/images/xbox.png" fluid />
                     </Link>

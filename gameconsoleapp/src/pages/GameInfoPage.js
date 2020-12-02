@@ -21,7 +21,9 @@ const GameInfoPage = (props) => {
             console.log(link)
             return (
                 <Carousel.Item>
-                    <iframe width="720" height="405" src={link} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <ContainerStyled>
+                        <IframeStyled src={link} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></IframeStyled>
+                    </ContainerStyled>
                 </Carousel.Item>
             )
         })}
@@ -37,15 +39,15 @@ const GameInfoPage = (props) => {
                             <Card.Title>{title}</Card.Title>
                             <Card.Subtitle>kr {price}</Card.Subtitle>
                             <Card.Text className="mt-4">Utgitt {publishDate}</Card.Text>
-                            <Image src={`https://cdn-a.sonyentertainmentnetwork.com/grc/images/ratings/hd/pegi/${pg}.png`} fluid />
+                            <Image style={{width: "8%"}} src={`https://cdn-a.sonyentertainmentnetwork.com/grc/images/ratings/hd/pegi/${pg}.png`} fluid />
                         </Card.ImgOverlay>
                     </CardStyled>
                 </Col>
             </Row>
             {
                 links != null &&
-                <Row className="text-center"> 
-                    <Col>
+                <Row className="justify-content-center"> 
+                    <Col lg={8}>
                         <Carousel className="mt-5">
                             {getLinks()}
                         </Carousel>
@@ -53,9 +55,9 @@ const GameInfoPage = (props) => {
                 </Row>
             }
             
-            <Row className="mt-4">
-                <Col>
-                    <Pstyled>{description}</Pstyled>
+            <Row className="mt-4 justify-content-center">
+                <Col lg={8}>
+                    <p>{description}</p>
                 </Col>
             </Row>
             <Row className="mt-4">
@@ -74,13 +76,26 @@ const GameInfoPage = (props) => {
     )
 }
 
-const Pstyled = styled.p`
-    width: 70%;
-    margin-left: 15%;
-`;
-
 const CardStyled = styled(Card)`
     border: none;
 `;  
+
+const ContainerStyled = styled(Container)`
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+`;
+
+const IframeStyled = styled.iframe`
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+`;
 
 export default GameInfoPage;

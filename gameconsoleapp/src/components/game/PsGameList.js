@@ -10,7 +10,7 @@ const PsGameList = () => {
 
     const generatePsGames = () => {
         return GameState.map((Game, i) => {
-            if (Game.console === "ps") {
+            if (Game.console === "ps" || Game.console === "ps/xbox") {
                 return <GameItem key={`pgi-${i}`} {...Game}></GameItem>
             }
         })

@@ -7,7 +7,7 @@ import GameDelete from "../components/GameDelete";
 
 const DeleteGames = () => {
     const [games, setGames] = useState(
-        [{id: "123", title: "PokemonGO", category: "RPG", price: 299, CoverPhoto: "firered.png"}]
+        [{id: "123", title: "PokemonGO", category: "RPG", price: 299, coverPhoto: "firered.png"}]
     );
 
     const [characters, setCharacters] = useState(
@@ -28,7 +28,7 @@ const DeleteGames = () => {
 
     const deleteGames = () => {
         return games.map((game, i) => {
-            return <GameDelete key={i} id={game.id} title={game.title}></GameDelete>
+            return <GameDelete key={i} id={game.id} title={game.title} coverPhoto={game.coverPhoto}></GameDelete>
         });
     }
 
@@ -41,43 +41,18 @@ const DeleteGames = () => {
     return (
         <Container>
             <Row>
-                <Col>
-                <h3>Games</h3>
-                    <Table striped bordered>
-                        <thead>
-                            <TrStyled>
-                                <th>GameId</th>
-                                <th>Title</th>
-                                <th>Delete</th>
-                            </TrStyled>
-                        </thead>
-                        <tbody>
-                            {deleteGames()}
-                        </tbody>
-                    </Table>
+                <Col lg={6}>
+                <h3 className="text-center">Games</h3>
+                    {deleteGames()}
                 </Col>
-                <Col>
-                    <h3>Characters</h3>
-                    <Table striped bordered>
-                        <thead>
-                            <TrStyled>
-                                <th>GameId</th>
-                                <th>Name</th>
-                            </TrStyled>
-                        </thead>
-                        <tbody>
-                            {deleteCharacters()}
-                        </tbody>
-                    </Table>
+                <Col lg={6}>
+                    <h3 className="text-center">Characters</h3>
+                    {deleteCharacters()}
                 </Col>
             </Row>
         </Container>
     )
 }
-
-const TrStyled = styled.tr`
-    color: #ffff;
-`;
 
 export default DeleteGames;
 

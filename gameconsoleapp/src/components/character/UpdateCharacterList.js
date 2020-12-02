@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Row, Table } from "react-bootstrap";
+import { Container, Row, Table } from "react-bootstrap";
 import UpdateCharacterItem from "./UpdateCharacterItem";
 const { useContext, useState } = require("react")
 const { CharacterContext } = require("../../context/CharacterContext")
@@ -19,24 +19,12 @@ const UpdateCharacterList = () => {
     }
 
     return (
-        <Table striped bordered>
-            <thead>
-                <TrStyled>
-                    <th>GameId</th>
-                    <th>Name</th>
-                    <th>Info</th>
-                    <th>Choose</th>
-                </TrStyled> 
-            </thead>
-            <tbody>
+        <Container>
+            <Row>
                 {generateCharacters()}
-            </tbody>
-        </Table>
+            </Row>
+        </Container>
     )
 }
-
-const TrStyled = styled.tr`
-    color: #ffff;
-`;
 
 export default UpdateCharacterList;

@@ -22,8 +22,8 @@ const Ps5Page = () => {
 
     return (
         <Container>
-            <Row className="mt-4">
-                <Col>
+            <Row className="mt-2">
+                <Col lg={8} className="mt-2 mb-5">
                     <Image src="https://localhost:5001/images/ps5.png" fluid />
                 </Col>
                 <Col>

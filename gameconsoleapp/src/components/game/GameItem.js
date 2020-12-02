@@ -11,7 +11,7 @@ const GameItem = ({id, title, price, category, coverPhoto, console, description,
 
     return (
         <Row className="mt-2 mb-4">
-            <Col>
+            <Col lg={6}>
                 <Image style={{height: "15rem", width: "100rem", objectFit: "cover"}} src={`https://localhost:5001/images/${coverPhoto}`} fluid />              
             </Col>
             <Col>

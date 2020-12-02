@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Container, Modal, Card } from "react-bootstrap";
 import styled from 'styled-components';
 
 const GameDelete = (props) => {
@@ -17,7 +17,7 @@ const GameDelete = (props) => {
     }
 
     return (
-        <TrStyled>
+        <CardStyled className="mt-4 mb-2">
             <Modal show={show} onHide={() => setShow(false)}>
                 <Modal.Header>
                     <ModalTitle>You sure?</ModalTitle>
@@ -26,33 +26,36 @@ const GameDelete = (props) => {
                     <ModalP>You sure you want to delete this game from database?</ModalP>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={() => setShow(false)}>Close</Button>
-                    <Button onClick={deleteGame}>Yes!</Button>
+                    <Button variant="danger"  onClick={() => setShow(false)}>Close</Button>
+                    <Button variant="success" onClick={deleteGame}>Yes!</Button>
                 </Modal.Footer>
             </Modal>
-            <td>
-                {props.id}
-            </td>
-            <td>
-                {props.title}
-            </td>
-            <td>
-                <Button onClick={() => setShow(true)}>Delete</Button>
-            </td>
-        </TrStyled>
+            <Card.Img src={`https://localhost:5001/images/${props.coverPhoto}`} />
+            <Card.ImgOverlay>
+                <Card.Title>GameId: {props.id}</Card.Title>
+                <Card.Title>{props.title}</Card.Title>
+            </Card.ImgOverlay>
+            <ButtonStyled onClick={() => setShow(true)}>Slett</ButtonStyled>
+        </CardStyled>
     )
 }
 
-const TrStyled = styled.tr`
-    color: #ffff;
+const ButtonStyled = styled(Button)`
+    width: 100%;
+`;
+
+const ModalP = styled.p`
+    color: black;
 `;
 
 const ModalTitle = styled(Modal.Title)`
     color: black;
 `;
 
-const ModalP = styled.p`
-    color: black;
+const CardStyled = styled(Card)`
+    color: #ffff;
+    font-size: 0.8rem;
+    border: none;
 `;
 
 export default GameDelete;

@@ -44,15 +44,16 @@ const GameUpdate = () => {
             {
                 gameState.coverPhoto != undefined &&
                 <>
-                    <Form.Row>
+                    <Form.Row className="justify-content-center">
                         <h4>Bilde visning</h4>  
                     </Form.Row>
-                    <Form.Row>
+                    <Form.Row className="justify-content-center">
 
                         <Image style={{height: "15rem", width: "rem", objectFit: "cover"}} src={`https://localhost:5001/images/${gameState.coverPhoto}`} fluid />
                     </Form.Row>
                 </>
             }
+            <h3>Spill</h3>
             <Form.Row>
                 <Form.Group as={Col}>
                     <Form.Label>Tittel</Form.Label>
@@ -83,7 +84,7 @@ const GameUpdate = () => {
             </Form.Group>
             </Form.Row>
             <Form.Row>
-                <Form.Group as={Col}>
+                <Form.Group as={Col} lg={6}>
                     <Form.Label>Forside bilde</Form.Label>
                     <Form.Control 
                         type = "text"
@@ -92,7 +93,7 @@ const GameUpdate = () => {
                         value={gameState.coverPhoto}
                     />
                 </Form.Group>
-                <Form.Group as={Col}>
+                <Form.Group as={Col} lg={6}>
                 <Form.Label>Aldersgrense</Form.Label>
                 <Form.Control 
                     type = "text"
@@ -113,12 +114,16 @@ const GameUpdate = () => {
                 <Form.Group as={Col}>
                     <Form.Label>Konsoll</Form.Label>
                     <Form.Control 
-                        type = "text"
+                        as = "select"
                         placeholder = "Konsoll"
                         onChange={(e) => setGameState({...gameState, console: e.target.value})}
-                        value={gameState.console}
-                        readOnly
-                    />
+                                            
+                    >
+                        <option value={gameState.console}>{gameState.console}</option>
+                        <option value="ps">PS5</option>
+                        <option value="xbox">Xbox</option>
+                        <option value="ps/xbox">Ps and Xbox</option>
+                    </Form.Control>
                 </Form.Group>
             </Form.Row>
             <Form.Row>
@@ -173,7 +178,7 @@ const GameUpdate = () => {
                 </Form.Group>
             </Form.Row>
             <Form.Row>
-                <Form.Group>
+                <Form.Group as={Col}>
                     <Button onClick={updateGame}>Endre spill</Button>
                 </Form.Group>
             </Form.Row>

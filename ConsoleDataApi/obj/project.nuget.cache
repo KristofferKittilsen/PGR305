@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rG7jN9mM7/Ct+cRcpyTpR14BdskueimG+rUHFiBMK7sUVKYji5tul0HMPZ9JsWAw5a5aGnSPRoM64mkjnkAfiA==",
+  "dgSpecHash": "obZ0NHqlIEi4Elz58QdOgHAYO7spSflfBymOPyNIYR1xVu1jg8e+IGXreldZeFst1s60THYWdgwHYQLNo3AF2A==",
   "success": true,
-  "projectFilePath": "D:\\Skole 2020-2021\\PGR305 - Web 3\\PGR305_exam\\ConsoleDataApi\\ConsoleDataApi.csproj",
+  "projectFilePath": "C:\\Users\\krist\\OneDrive\\Skrivebord\\PGR305\\ConsoleDataApi\\ConsoleDataApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krist\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\krist\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",

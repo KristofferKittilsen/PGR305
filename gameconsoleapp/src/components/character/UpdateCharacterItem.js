@@ -13,26 +13,36 @@ const UpdateCharacterItem = ({id, name, info, gameId}) => {
     }
 
     return (
-        <TrStyled>
-            <td>
-                {gameId}
-            </td>
-            <td>
-                {name}
-            </td>
-            <td>
-                {info}
-            </td>
-            <td>
-                <Button onClick={setSelectedCharacter}>Choose</Button>
-            </td>
-        </TrStyled>
+        <Col lg={4} className="mt-2">
+            <CardStyled>
+                <Card.Body>
+                    <CardTextStyled>{gameId}</CardTextStyled>
+                    <CardTextStyled>{name}</CardTextStyled>
+                    <CardTextStyled>{info}</CardTextStyled>
+                    <ButtonStyled onClick={setSelectedCharacter}>Velg</ButtonStyled>
+                </Card.Body>
+            </CardStyled>
+        </Col>
     )
 }
 
-const TrStyled = styled.tr`
-    color: #ffff;
-    font-size: 0.8rem;
+const CardStyled = styled(Card)`
+    border: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    min-height: 100%;
+`;  
+
+const CardTextStyled = styled(Card.Text)`
+    color: black;
+    font-size: 0.6rem;
+`;
+
+const ButtonStyled = styled(Button)`
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: relative;
 `;
 
 export default UpdateCharacterItem;
