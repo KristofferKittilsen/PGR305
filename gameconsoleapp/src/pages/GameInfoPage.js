@@ -36,9 +36,9 @@ const GameInfoPage = (props) => {
                     <CardStyled>
                         <Card.Img style={{maxWidth: "70rem", maxHeight: "50rem"}} src={`https://localhost:5001/images/${coverPhoto}`}/>
                         <Card.ImgOverlay>
-                            <Card.Title>{title}</Card.Title>
-                            <Card.Subtitle>kr {price}</Card.Subtitle>
-                            <Card.Text className="mt-4">Utgitt {publishDate}</Card.Text>
+                            <CardTitleStyled className="glowText">{title}</CardTitleStyled>
+                            <CardSubtitleStyled className="glowText">kr {price}</CardSubtitleStyled>
+                            <Card.Text className="mt-4 glowText">Utgitt {publishDate}</Card.Text>
                             <Image style={{width: "8%"}} src={`https://cdn-a.sonyentertainmentnetwork.com/grc/images/ratings/hd/pegi/${pg}.png`} fluid />
                         </Card.ImgOverlay>
                     </CardStyled>
@@ -97,5 +97,13 @@ const IframeStyled = styled.iframe`
     height: 100%;
     border: none;
 `;
+
+const CardTitleStyled = styled(Card.Title)`
+    font-size: 2em;
+`;
+
+const CardSubtitleStyled = styled(Card.Subtitle)`
+    font-size: 2em;
+`
 
 export default GameInfoPage;

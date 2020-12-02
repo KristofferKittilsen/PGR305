@@ -30,17 +30,17 @@ const XboxPage = () => {
                     <Container>
                         <Row>
                             <Col>
-                                <H4Styled>12 Tflops med kraft</H4Styled>
+                                <H4Styled><Image style={{width: "15%"}} src="https://compass-ssl.xbox.com/assets/40/ca/40cab888-b6f8-43b3-9618-8c07f26b8f0b.svg?n=XBX_A-PowerYourDreams_Optimized-Icon-FPO.svg" /> Optimalisert for series X|S</H4Styled>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <FontSize>De 12 teraflopene med prosessorkraft som er plassert i systemet på en chip (SOC), jobber med AMDs Zen 2 og RDNA 2-arkitekturer for å resultere i verdener som krever nærmere titt.</FontSize>
+                                <FontSize>Spill bygget med Xbox Series X | S-utviklingssettet viser frem reduserte belastningstider og imponerende grafikk på opptil 120</FontSize>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <H4Styled>Ser bedre ut. Spiller bedre</H4Styled>
+                                <H4Styled><Image style={{width: "15%"}} src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-ray-trace-white-icon-01-en-21aug20?$native--t$" />Ser bedre ut. Spiller bedre</H4Styled>
                             </Col>
                         </Row>
                         <Row>
@@ -50,7 +50,7 @@ const XboxPage = () => {
                         </Row>
                         <Row>
                             <Col>
-                                <H4Styled>Laget for hastighet</H4Styled>
+                                <H4Styled><Image style={{width: "15%"}} src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-120fps-white-icon-01-en-21aug20?$native--t$" />Laget for hastighet</H4Styled>
                             </Col>
                         </Row>
                         <Row>
@@ -64,7 +64,7 @@ const XboxPage = () => {
             <Container>
                 <Row className="mt-5">
                     <Col>
-                        <H4Styled className="text-center">Fantastiske spill</H4Styled>
+                        <h4 style={{color: "#9bf00b"}} className="text-center">Fantastiske spill</h4>
                     </Col>
                 </Row>                
                 <Row>
@@ -85,7 +85,8 @@ const FontSize = styled.p`
 `;
 
 const H4Styled = styled.h4`
-    color: #ffff;
+    color: #9bf00b;
+    font-size: 1em;
 `;
 
 export default XboxPage;

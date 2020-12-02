@@ -32,3 +32,25 @@ body {
 .btn-primary:hover {
     animation: glow 1s alternate infinite;
 }
+
+@keyframes glowText {
+    0% {
+        color: white;
+    } 
+    25% {
+        color: yellow;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: blue;
+    }
+    100% {
+        color: black;
+    }
+}
+
+.glowText {
+    animation: glowText 10s ease-in-out infinite alternate;
+}

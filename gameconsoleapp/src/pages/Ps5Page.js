@@ -1,11 +1,9 @@
-import styled from 'styled-components'
-import { useEffect, useState } from 'react'
 import Axios from 'axios';
-import Game from '../components/Game';
-import { GameProvider } from '../context/GameContext';
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import PsGameList from "../components/game/PsGameList";
-import CustomNavbar from '../components/CustomNavbar';
-const { Container, Row, Col, Image } = require("react-bootstrap")
+import { GameProvider } from '../context/GameContext';
+const { Container, Row, Col, Image, Figure } = require("react-bootstrap")
 
 const Ps5Page = () => {
 
@@ -30,7 +28,7 @@ const Ps5Page = () => {
                     <Container>
                         <Row>
                             <Col>
-                                <H4Styled>Strålesporing</H4Styled>
+                                <H4Styled><Image style={{width: "15%"}} src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-ray-trace-white-icon-01-en-21aug20?$native--t$" />Strålesporing</H4Styled>
                             </Col>
                         </Row>
                         <Row>
@@ -40,7 +38,7 @@ const Ps5Page = () => {
                         </Row>
                         <Row>
                             <Col>
-                                <H4Styled>4K-TV-spilling</H4Styled>
+                                <H4Styled><Image style={{width: "15%"}} src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-4k-tv-gaming-white-icon-01-en-21aug20?$native--t$" />4K-TV-spilling</H4Styled>
                             </Col>
                         </Row>
                         <Row>
@@ -50,7 +48,7 @@ const Ps5Page = () => {
                         </Row>
                         <Row>
                             <Col>
-                                <H4Styled>Opptil 120 bilder i sekunder med en utgangseffekt på 120 Hz</H4Styled>
+                                <H4Styled><Image style={{width: "15%"}} src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-120fps-white-icon-01-en-21aug20?$native--t$" />Opptil 120 bilder i sekunder med en utgangseffekt på 120 Hz</H4Styled>
                             </Col>
                         </Row>
                         <Row>
@@ -60,7 +58,7 @@ const Ps5Page = () => {
                         </Row>
                         <Row>
                             <Col>
-                                <H4Styled>HDR-teknologi</H4Styled>
+                                <H4Styled><Image style={{width: "15%"}} src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-hdr-white-icon-01-en-21aug20?$native--t$" />HDR-teknologi</H4Styled>
                             </Col>
                         </Row>
                         <Row>
@@ -74,7 +72,7 @@ const Ps5Page = () => {
             <Container>
                 <Row className="mt-5">
                     <Col>
-                        <H4Styled className="text-center">Fantastiske spill</H4Styled>
+                        <h4 style={{color: "#0072ce"}} className="text-center">Fantastiske spill</h4>
                     </Col>
                 </Row>
                 <Row>
@@ -95,7 +93,8 @@ const FontSize = styled.p`
 `;
 
 const H4Styled = styled.h4`
-    color: #ffff;
+    color: #0072ce;
+    font-size: 1em;
 `;
 
 export default Ps5Page;

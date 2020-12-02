@@ -18,7 +18,7 @@ const XboxGameList = () => {
 
     return (
         <Container>
-            <Row className="mt-4">
+            <Row>
                 {generateXboxgames()}
             </Row>
         </Container>   

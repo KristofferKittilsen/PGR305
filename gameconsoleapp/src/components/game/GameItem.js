@@ -9,6 +9,16 @@ const GameItem = ({id, title, price, category, coverPhoto, console, description,
     const {Games} = useContext(GameContext);
     const [GameState, setGameState] = Games;
 
+    const changeButtonColor = () => {
+        if (console == "ps") {
+            return <MoreBtn style={{backgroundColor: "#0072ce"}}>Finn ut mer</MoreBtn>
+        } else if (console == "xbox") {
+            return <MoreBtn style={{backgroundColor: "#9bf00b", color: "black"}}>Finn ut mer</MoreBtn>
+        } else {
+            return <MoreBtn style={{backgroundColor: "#0072ce"}}>Finn ut mer</MoreBtn>
+        }
+    }
+
     return (
         <Row className="mt-2 mb-4">
             <Col lg={6}>
@@ -32,7 +42,7 @@ const GameItem = ({id, title, price, category, coverPhoto, console, description,
                         links
                     }
                     }}>
-                    <MoreBtn>Finn ut mer</MoreBtn>
+                    {changeButtonColor()}
                 </Link>
             </Col>
         </Row>
