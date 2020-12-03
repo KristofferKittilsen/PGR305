@@ -20,17 +20,17 @@ const CharacterDelete = (props) => {
         <CardStyled className="mt-4">
             <Modal show={show} onHide={() => setShow(false)}>
                 <Modal.Header>
-                    <ModalTitle>You sure?</ModalTitle>
+                    <ModalTitle>Er du sikker?</ModalTitle>
                 </Modal.Header>
                 <Modal.Body>
-                    <ModalP>You sure you want to delete this game from database?</ModalP>
+                    <ModalP>Sikker på at du vil slette dette fra databasen?</ModalP>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="danger" onClick={() => setShow(false)}>Close</Button>
-                    <Button variant="success" onClick={deleteCharacter}>Yes!</Button>
+                    <Button variant="danger" onClick={() => setShow(false)}>Lukk</Button>
+                    <Button variant="success" onClick={deleteCharacter}>Ja</Button>
                 </Modal.Footer>
             </Modal>   
-            <Card.Title>GameId: {props.gameId}</Card.Title>
+            <Card.Title>SpillId: {props.gameId}</Card.Title>
             <Card.Title>{props.name}</Card.Title>
             <Button onClick={() => setShow(true)}>Slett</Button>
         </CardStyled>

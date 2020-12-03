@@ -63,21 +63,20 @@ const AddGame = () => {
                 <Col>
                     <Form>
                         <Form.Row className="mb-3">
-                            <h3>Add game</h3>
+                            <h3>Legg til spill</h3>
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Form.Label>Game title</Form.Label>
+                                <Form.Label>Spill tittel</Form.Label>
                                 <Form.Control 
                                     required
                                     type = "text"
-                                    placeholder = "Game title"
+                                    placeholder = "Spill tittel"
                                     onChange = {(e) => setTitle(e.target.value)}
                                 />
-                                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                             </Form.Group>
                             <Form.Group as={Col}>
-                                <Form.Label>Game category</Form.Label>
+                                <Form.Label>Kategori</Form.Label>
                                 <Form.Control 
                                     required
                                     as = "select"
@@ -93,32 +92,29 @@ const AddGame = () => {
                                     <option value="Sports">Sports</option>
                                     <option value="MMO">MMO</option>
                                 </Form.Control>
-                                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                             </Form.Group>
                             <Form.Group as={Col}>
-                                <Form.Label>Game price</Form.Label>
+                                <Form.Label>Pris</Form.Label>
                                 <Form.Control 
                                     required
                                     type = "number"
-                                    placeholder = "Game price"
+                                    placeholder = "Pris"
                                     onChange = {(e) => setPrice(parseInt(e.target.value))}
                                 />
-                                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                             </Form.Group>
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Form.Label>Cover photo</Form.Label>
+                                <Form.Label>Forside bilde</Form.Label>
                                 <Form.Control 
                                     required
                                     type = "text"
-                                    placeholder = "Cover photo"
+                                    placeholder = "Forside bilde"
                                     onChange = {(e) => setCoverPhoto(e.target.value)}
                                 />
-                                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                             </Form.Group>
                             <Form.Group as={Col}>
-                                <Form.Label>Game console</Form.Label>
+                                <Form.Label>Spill konsoll</Form.Label>
                                 <Form.Control 
                                     required
                                     as = "select"
@@ -130,21 +126,20 @@ const AddGame = () => {
                                     <option value="xbox">Xbox</option>
                                     <option value="ps/xbox">Ps and Xbox</option>
                                 </Form.Control>
-                                <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                             </Form.Group>
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Form.Label>Pg rating</Form.Label>
+                                <Form.Label>Aldersgrense</Form.Label>
                                 <Form.Control 
                                     required
                                     type = "text"
-                                    placeholder = "Pg rating"
+                                    placeholder = "Aldersgrense"
                                     onChange = {(e) => setPg(e.target.value)}
                                 />
                             </Form.Group>
                             <Form.Group as={Col}>
-                                <Form.Label>Publish date</Form.Label>
+                                <Form.Label>Utgitt</Form.Label>
                                 <Form.Control 
                                     required
                                     type = "date"
@@ -154,17 +149,17 @@ const AddGame = () => {
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Form.Label>Links</Form.Label>
+                                <Form.Label>Linker</Form.Label>
                                 <Form.Control 
                                     type = "text"
-                                    placeholder = "Links"
+                                    placeholder = "Linker"
                                     onChange = {(e) => setLinksInput(e.target.value)}
                                 />
                             </Form.Group>
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Button onClick={addLink}>Add link to array</Button>
+                                <Button onClick={addLink}>Legg til link</Button>
                             </Form.Group>
                             <Col>
                                 <ul>
@@ -178,22 +173,22 @@ const AddGame = () => {
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Form.Label>Subtitle</Form.Label>
+                                <Form.Label>Undertittel</Form.Label>
                                 <Form.Control 
                                     required
                                     as = "textarea"
-                                    placeholder = "Subtitle"
+                                    placeholder = "Undertittel"
                                     onChange = {(e) => setSubtitle(e.target.value)}
                                 />
                             </Form.Group>
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Form.Label>Description</Form.Label>
+                                <Form.Label>Beskrivelse</Form.Label>
                                 <Form.Control 
                                     required
                                     as = "textarea"
-                                    placeholder = "Description"
+                                    placeholder = "Beskrivelse"
                                     onChange = {(e) => setDescription(e.target.value)}
                                 />
                             </Form.Group>
@@ -209,51 +204,51 @@ const AddGame = () => {
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Button onClick={uploadImage}>Upload image</Button>
+                                <Button onClick={uploadImage}>Last opp bilde</Button>
                             </Form.Group>
                             <Form.Group as={Col}>
-                                <Button onClick={addGame}>Add game</Button>
+                                <Button onClick={addGame}>Legg til spill</Button>
                             </Form.Group>
                         </Form.Row>
 
 
                         <Form.Row className="mt-5 mb-3">
-                            <h3>Add character</h3>  
+                            <h3>Legg til karakter</h3>  
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Form.Label>Character gameId</Form.Label>
+                                <Form.Label>Karakter spillId</Form.Label>
                                 <Form.Control 
                                     required
                                     type = "text"
-                                    placeholder = "Character gameId"
+                                    placeholder = "Karakter spillId"
                                     onChange = {(e) => setGameId(e.target.value)}
                                 />
                             </Form.Group>
                             <Form.Group as={Col}>
-                                <Form.Label>Character name</Form.Label>
+                                <Form.Label>Karakter navn</Form.Label>
                                 <Form.Control 
                                     required
                                     type = "text"
-                                    placeholder = "Character name"
+                                    placeholder = "Karakter navn"
                                     onChange = {(e) => setName(e.target.value)}
                                 />
                             </Form.Group>
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Form.Label>Character info</Form.Label>
+                                <Form.Label>Karakter informasjon</Form.Label>
                                 <Form.Control 
                                     required
                                     as = "textarea"
-                                    placeholder = "Character info"
+                                    placeholder = "Karakter informasjon"
                                     onChange = {(e) => setInfo(e.target.value)}
                                 />
                             </Form.Group>
                         </Form.Row>
                         <Form.Row>
                             <Form.Group as={Col}>
-                                <Button onClick={addCharacter}>Add character</Button>
+                                <Button onClick={addCharacter}>Legg til karakter</Button>
                             </Form.Group>
                         </Form.Row>
                     </Form>

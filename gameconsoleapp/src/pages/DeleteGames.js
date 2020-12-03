@@ -41,11 +41,11 @@ const DeleteGames = () => {
         <Container>
             <Row>
                 <Col lg={6}>
-                <h3 className="text-center">Games</h3>
+                <h3 className="text-center">Spill</h3>
                     {deleteGames()}
                 </Col>
                 <Col lg={6}>
-                    <h3 className="text-center">Characters</h3>
+                    <h3 className="text-center">Karakterer</h3>
                     {deleteCharacters()}
                 </Col>
             </Row>
