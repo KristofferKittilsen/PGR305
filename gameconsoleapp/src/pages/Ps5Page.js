@@ -1,9 +1,9 @@
 import Axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Col, Container, Image, Row } from "react-bootstrap";
 import styled from 'styled-components';
 import PsGameList from "../components/game/PsGameList";
 import { GameProvider } from '../context/GameContext';
-const { Container, Row, Col, Image, Figure } = require("react-bootstrap")
 
 const Ps5Page = () => {
 

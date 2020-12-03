@@ -1,7 +1,5 @@
-import styled from 'styled-components'
-import { Card, Col, Button } from "react-bootstrap";
-import { useContext } from "react";
-import { CharacterContext } from "../../context/CharacterContext";
+import { Col } from "react-bootstrap";
+import styled from 'styled-components';
 
 const CharacterItem = ({id, name, info}) => {
 

@@ -1,7 +1,7 @@
 import GameItem from "./GameItem";
-const { useContext } = require("react");
-const { Row, Container } = require("react-bootstrap");
-const { GameContext } = require("../../context/GameContext");
+import { useContext } from "react";
+import { Row, Container } from "react-bootstrap";
+import  { GameContext } from "../../context/GameContext";
 
 const PsGameList = () => {
 

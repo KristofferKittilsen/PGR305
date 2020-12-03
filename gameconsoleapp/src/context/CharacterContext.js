@@ -1,5 +1,5 @@
 import axios from "axios";
-import {useState, createContext, useEffect} from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CharacterContext = createContext();
 

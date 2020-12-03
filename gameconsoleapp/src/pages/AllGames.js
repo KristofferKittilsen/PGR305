@@ -1,33 +1,34 @@
-import axios from "axios";
+import Axios from "axios";
 import { useEffect, useState } from "react";
-import Game from "../components/Game";
+import { Col, Container, Row } from "react-bootstrap";
+import AllGamesList from "../components/game/AllGamesList";
+import { GameProvider } from "../context/GameContext";
 
 const AllGames = () => {
-    
-    const [games, setGames] = useState(
-        [{id: "123", title: "PokemonGO", category: "RPG", price: 299, coverPhoto: "firered.png"}]
-    );
+
+    const [games, setGames] = useState([{id: "123", title: "PokemonGO", category: "RPG", price: 299, coverPhoto: "firered.png"}])
 
     useEffect (() => {
-        const url = "https://localhost:5001/Games";
-        console.log(url);
-        axios.get(url).then(response => {
-            setGames(response.data);
+        const url = "https://localhost:5001/games";
+        Axios.get(url).then(response => {
+            setGames(response.data)
         })
     }, [])
 
-    const getGames = () => {
-        return games.map((game, i) => {
-            return <Game key={i} {...game}></Game>
-        });
-    }
     
     return (
-        <section>
-            <h3>All games</h3>
-            <p>Amount of games: {games.length}</p>
-            {getGames()}
-        </section>
+        <Container>
+            <Row className="text-center mt-2">
+                <Col><h3>Alle spill</h3></Col>
+            </Row>
+            <Row>
+                <Col>
+                    <GameProvider>
+                        <AllGamesList></AllGamesList>
+                    </GameProvider>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 

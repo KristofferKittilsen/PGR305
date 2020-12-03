@@ -1,6 +1,5 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import CustomNavbar from "../components/CustomNavbar";
 
 const Home = () => {
     return (

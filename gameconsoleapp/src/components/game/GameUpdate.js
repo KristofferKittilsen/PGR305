@@ -1,7 +1,7 @@
 import { Button, Form, Col, Image } from "react-bootstrap";
-const { default: Axios } = require("axios");
-const { useContext, useState } = require("react")
-const { GameContext } = require("../../context/GameContext")
+import Axios from "axios";
+import { useContext, useState } from "react";
+import { GameContext } from "../../context/GameContext"
 
 const GameUpdate = () => {
 
@@ -36,7 +36,6 @@ const GameUpdate = () => {
         const splicedLinks = links.splice(indexOfLink, 1)
         
         alert(`Removed ${linksInput}`)
-        //No idea what this is, but it suddently worked
     }
     
     return (
@@ -76,11 +75,20 @@ const GameUpdate = () => {
                 <Form.Group as={Col} lg={4}>
                     <Form.Label>Kategory</Form.Label>
                     <Form.Control 
-                        type = "text"
+                        as = "select"
                         placeholder = "Kategory"
                         onChange={(e) => setGameState({...gameState, category: e.target.value})}
-                        value={gameState.category}
-                    />
+                    >
+                        <option value={gamesState.category}>{gameState.category}</option>
+                        <option value="Action">Action</option>
+                        <option value="Action-adventure">Action-adventure</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Role-playing">Role-playing</option>
+                        <option value="Simulation">Simulation</option>
+                        <option value="Strategy">Strategy</option>
+                        <option value="Sports">Sports</option>
+                        <option value="MMO">MMO</option>
+                    </Form.Control>
             </Form.Group>
             </Form.Row>
             <Form.Row>

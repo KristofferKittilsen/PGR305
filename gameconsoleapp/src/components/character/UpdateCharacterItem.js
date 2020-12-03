@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-const { useContext, useState } = require("react");
-const { Col, Card, Button, Modal } = require("react-bootstrap");
-const { CharacterContext, CharacterProvider } = require("../../context/CharacterContext")
+import {useContext, useReact} from "react";
+import { Col, Card, Button, Modal } from "react-bootstrap";
+import { CharacterContext, CharacterProvider } from "../../context/CharacterContext";
 
 const UpdateCharacterItem = ({id, name, info, gameId}) => {
 

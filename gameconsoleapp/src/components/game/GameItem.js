@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import styled from 'styled-components'
-const { useContext } = require("react");
-const { Col, Card, Button, Image, Row } = require("react-bootstrap");
-const { GameContext } = require("../../context/GameContext")
+import styled from 'styled-components';
+import { useContext } from "react";
+import { Col, Card, Button, Image, Row } from "react-bootstrap";
+import { GameContext } from "../../context/GameContext";
 
 const GameItem = ({id, title, price, category, coverPhoto, console, description, subtitle, pg, publishDate, links}) => {
 

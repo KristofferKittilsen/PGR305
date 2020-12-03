@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react'
-import styled from 'styled-components'
 import Axios from 'axios';
-import Game from '../components/Game';
-import { GameProvider } from '../context/GameContext';
+import { useEffect, useState } from 'react';
+import { Col, Container, Image, Row } from "react-bootstrap";
+import styled from 'styled-components';
 import XboxGameList from '../components/game/XboxGameList';
-import CustomNavbar from '../components/CustomNavbar';
-const { Container, Row, Col, Image } = require("react-bootstrap")
+import { GameProvider } from '../context/GameContext';
 
 const XboxPage = () => {
 

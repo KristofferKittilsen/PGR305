@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Button, Container, Modal, Card } from "react-bootstrap";
+import { Button, Card, Modal } from "react-bootstrap";
 import styled from 'styled-components';
 
 const GameDelete = (props) => {
@@ -42,6 +42,7 @@ const GameDelete = (props) => {
 
 const ButtonStyled = styled(Button)`
     width: 100%;
+    position: relative;
 `;
 
 const ModalP = styled.p`

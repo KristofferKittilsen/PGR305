@@ -1,7 +1,7 @@
 import { Accordion, Button, Card, Col, Image } from 'react-bootstrap';
 import styled from 'styled-components'
-const { useContext } = require("react");
-const { GameContext } = require("../../context/GameContext");
+import { useContext } from "react";
+import { GameContext } from "../../context/GameContext";
 
 const UpdateGameItem = ({id, title, price, category, coverPhoto, description, subtitle, pg, publishDate, console, links}) => {
 

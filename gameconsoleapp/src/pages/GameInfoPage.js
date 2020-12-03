@@ -1,9 +1,7 @@
-import styled from 'styled-components'
-import { Col, Container, Row, Image, Carousel, ResponsiveEmbed, Card } from "react-bootstrap";
+import { Card, Carousel, Col, Container, Image, Row } from "react-bootstrap";
+import styled from 'styled-components';
 import CharacterList from "../components/character/CharacterList";
-import CustomNavbar from "../components/CustomNavbar";
 import { CharacterProvider } from "../context/CharacterContext";
-import { useState } from 'react';
 
 const GameInfoPage = (props) => {
 
@@ -14,8 +12,10 @@ const GameInfoPage = (props) => {
     const pg = props.location.state.pg;
     const publishDate = props.location.state.publishDate;
     const links = props.location.state.links;
+    const category = props.location.state.category;
 
     const getLinks = () => {
+        console.log(links)
         if (links != null) {
         return links.map((link) => {
             console.log(link)
@@ -38,6 +38,7 @@ const GameInfoPage = (props) => {
                         <Card.ImgOverlay>
                             <CardTitleStyled className="glowText">{title}</CardTitleStyled>
                             <CardSubtitleStyled className="glowText">kr {price}</CardSubtitleStyled>
+                            <Card.Text className="glowText">Kategori: {category}</Card.Text>
                             <Card.Text className="mt-4 glowText">Utgitt {publishDate}</Card.Text>
                             <Image style={{width: "8%"}} src={`https://cdn-a.sonyentertainmentnetwork.com/grc/images/ratings/hd/pegi/${pg}.png`} fluid />
                         </Card.ImgOverlay>
@@ -45,7 +46,7 @@ const GameInfoPage = (props) => {
                 </Col>
             </Row>
             {
-                links != null &&
+                links.length != 0 &&
                 <Row className="justify-content-center"> 
                     <Col lg={8}>
                         <Carousel className="mt-5">

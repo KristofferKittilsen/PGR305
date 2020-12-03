@@ -80,10 +80,19 @@ const AddGame = () => {
                                 <Form.Label>Game category</Form.Label>
                                 <Form.Control 
                                     required
-                                    type = "text"
-                                    placeholder = "Game category"
+                                    as = "select"
                                     onChange = {(e) => setcategory(e.target.value)}
-                                />
+                                >
+                                    <option value="0">Velg...</option>
+                                    <option value="Action">Action</option>
+                                    <option value="Action-adventure">Action-adventure</option>
+                                    <option value="Adventure">Adventure</option>
+                                    <option value="Role-playing">Role-playing</option>
+                                    <option value="Simulation">Simulation</option>
+                                    <option value="Strategy">Strategy</option>
+                                    <option value="Sports">Sports</option>
+                                    <option value="MMO">MMO</option>
+                                </Form.Control>
                                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                             </Form.Group>
                             <Form.Group as={Col}>

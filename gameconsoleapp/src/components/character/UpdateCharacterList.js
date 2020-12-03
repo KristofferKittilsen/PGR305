@@ -1,16 +1,13 @@
-import styled from 'styled-components'
-import { Container, Row, Table } from "react-bootstrap";
+import { useContext, useState } from "react";
+import { Container, Row } from "react-bootstrap";
+import { CharacterContext } from "../../context/CharacterContext";
 import UpdateCharacterItem from "./UpdateCharacterItem";
-const { useContext, useState } = require("react")
-const { CharacterContext } = require("../../context/CharacterContext")
+
 
 const UpdateCharacterList = () => {
 
     const {characters} = useContext(CharacterContext);
     const [charactersState, setCharactersState] = characters;
-
-    const [searchInput, setSearchInput] = useState("");
-    const [filteredState, setFilteredState] = characters;
 
     const generateCharacters = () => {
         return charactersState.map((character, i) => {

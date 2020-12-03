@@ -1,8 +1,7 @@
-import styled from 'styled-components'
-const { useContext } = require("react");
-const { Table, Container, Row, Col } = require("react-bootstrap");
-const { GameContext } = require("../../context/GameContext");
-const { default: UpdateGameItem } = require("./UpdateGameItem");
+import { useContext } from "react";
+import { Container, Row } from "react-bootstrap";
+import { GameContext } from "../../context/GameContext";
+import UpdateGameItem from "./UpdateGameItem";
 
 const UpdateGameList = () => {
 

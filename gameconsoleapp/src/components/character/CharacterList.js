@@ -1,7 +1,7 @@
 import { useContext } from "react";
+import { Row } from "react-bootstrap";
 import { CharacterContext } from "../../context/CharacterContext";
 import CharacterItem from "./CharacterItem";
-import { Row } from "react-bootstrap";
 
 const CharacterList = () => {
 

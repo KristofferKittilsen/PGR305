@@ -1,7 +1,7 @@
+import { useContext } from "react";
+import { Container, Row } from "react-bootstrap";
 import { GameContext } from "../../context/GameContext";
 import GameItem from "./GameItem";
-const { useContext } = require("react");
-const { Row, Col, Container } = require("react-bootstrap");
 
 const XboxGameList = () => {
 

@@ -1,9 +1,8 @@
-import styled from 'styled-components'
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Col, Container, Row, Table } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import CharacterDelete from "../components/character/CharacterDelete";
-import GameDelete from "../components/GameDelete";
+import GameDelete from "../components/game/GameDelete";
 
 const DeleteGames = () => {
     const [games, setGames] = useState(

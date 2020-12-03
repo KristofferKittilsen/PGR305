@@ -41,6 +41,7 @@ const CardStyled = styled(Card)`
     color: black;
     font-size: 0.8rem;
     border: none;
+    background-color: lightgray;
 `;
 
 const ModalTitle = styled(Modal.Title)`
